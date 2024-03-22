@@ -1,5 +1,7 @@
 ArtAlley
+
 Live site: https://artalley.netlify.app/
+
 ArtAlley is a dynamic website that serves as your local source for high-quality images and videos directly from their creators. It is built using React, Tailwind CSS, React Icons, Lottie Animation, and Swiper React.
 
 Features
