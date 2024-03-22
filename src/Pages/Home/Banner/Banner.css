@@ -22,3 +22,42 @@
     left: 50%;
     position: absolute;
 }
+
+.img-container{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 350px;
+    height: 350px;
+}
+.box-img{
+    margin: auto;
+}
+.join-btn{
+    width: 40%;
+    margin: auto;
+}
+
+.main{
+    position: relative;
+}
+.All-img{
+    position: absolute;
+    background-color: whitesmoke;
+    top: 82%;
+    left: 5%;
+    border: 1px solid red;
+    width: 90%;
+    margin: auto;
+    z-index: 2;
+}
+.cate-nav{
+    width: 93%;
+    border: 1px solid red;
+}
