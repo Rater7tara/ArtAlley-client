@@ -27,20 +27,20 @@ const NavBar = () => {
                     <li className='border-t-2 border-gray-400'>
                         <nav>
                             <div className="grid grid-flow-col gap-4 py-2">
-                                <a><FaTwitter className='social text-amber-600'></FaTwitter></a>
-                                <a><FaYoutube className='social text-amber-600'></FaYoutube></a>
-                                <a><FaFacebook className='social text-amber-600'></FaFacebook></a>
-                                <a><FaInstagram className='social text-amber-600'></FaInstagram></a>
-                                <a><FaGithub className='social text-amber-600'></FaGithub></a>
+                                <a><FaTwitter className='social text-orange-600'></FaTwitter></a>
+                                <a><FaYoutube className='social text-orange-600'></FaYoutube></a>
+                                <a><FaFacebook className='social text-orange-600'></FaFacebook></a>
+                                <a><FaInstagram className='social text-orange-600'></FaInstagram></a>
+                                <a><FaGithub className='social text-orange-600'></FaGithub></a>
                             </div>
                         </nav>
                     </li>
                 </ul>
             </div>
             <button className="btn btn-outline btn-sm text-gray-400 ms-2 me-4 mt-2 ">Submit Photo</button>
-            <div className='border-s-2 border-gray-200 px-4'>
+            <div className='lg:border-s-2 border-gray-200 px-4'>
                 <button className="btn bg-white text-gray-400 btn-sm me-2 mt-2 border-none">Login</button>
-                <button className="btn bg-amber-600 text-white btn-sm mt-2">Join Free</button>
+                <button className="btn bg-orange-600 text-white btn-sm mt-2">Join Free</button>
             </div>
         </>
 
@@ -49,14 +49,14 @@ const NavBar = () => {
         <div className="navbar bg-base-navbar max-w-screen-2xl  text-white ">
             <div className="navbar-start">
                 <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost bg-orange-800 lg:hidden">
+                    <div tabIndex={0} role="button" className="btn btn-ghost bg-orange-300 lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         {navOptions}
                     </ul>
                 </div>
-                <a href='/' className="btn btn-ghost text-2xl text-amber-600 font-bold ms-4"><img className='logo' src={logo} alt="" /> ArtAlley</a>
+                <a href='/' className="btn btn-ghost text-2xl text-orange-600 font-bold ms-4"><img className='logo' src={logo} alt="" /> ArtAlley</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

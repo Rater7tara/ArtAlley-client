@@ -4,9 +4,10 @@ import Loading from '../../../components/Loading/Loading';
 import './Banner.css';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
+
+
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
@@ -50,7 +51,7 @@ const Banner = () => {
             getPhotos();
         }
     };
-
+console.log(photos);
 
     return (
         <>
@@ -84,48 +85,54 @@ const Banner = () => {
                             pagination={{ clickable: true }}
                             modules={[Pagination]}
                             breakpoints={{
-                                1024: { slidesPerView: 5 },
-                                768: { slidesPerView: 3 },
-                                640: { slidesPerView: 3 },
-                                575: { slidesPerView: 3 }
+                                320: {
+                                    slidesPerView: 1, // Small devices (sm) like mobile phones
+                                },
+                                540: {
+                                    slidesPerView: 2, 
+                                },
+                                768: {
+                                    slidesPerView: 3, // Medium devices (md) like tablets
+                                },
+                                1024: {
+                                    slidesPerView: 5, // Large devices (lg) like desktops
+                                }
                             }}
-                            className="mySwiper m-auto"
+                            className="mySwiper mb-24"
                         >
                             <SwiperSlide>
-                                <div className='car-in-div relative max-w-xs overflow-hidden bg-cover bg-no-repeat' >
-                                    <img className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg" alt="" />
-                                    <button onClick={() => setQuery("Summer")} className='text-center-car text-white font-bold text-2xl'>Summer</button>
-                                </div>
+                                <img onClick={() => setQuery("Summer")} className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/46710/pexels-photo-46710.jpeg" alt="" />
+                                <button onClick={() => setQuery("Summer")} className='text-center-car text-white font-bold text-2xl'>Summer</button>
 
                             </SwiperSlide>
-                            <SwiperSlide><div className='car-in-div relative max-w-xs overflow-hidden bg-cover bg-no-repeat'>
-                                <img className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg" alt="" />
+                            <SwiperSlide>
+                                <img onClick={() => setQuery("Cat")} className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg" alt="" />
                                 <button onClick={() => setQuery("Cat")} className='text-center-car text-white text-2xl font-bold'>Cat</button>
-                            </div></SwiperSlide>
-                            <SwiperSlide><div className='car-in-div relative max-w-xs overflow-hidden bg-cover bg-no-repeat'>
-                                <img className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/219692/pexels-photo-219692.jpeg" alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img onClick={() => setQuery("City")} className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg" alt="" />
                                 <button onClick={() => setQuery("City")} className='text-center-car text-white font-bold text-2xl'>City</button>
-                            </div></SwiperSlide>
-                            <SwiperSlide><div className='car-in-div relative max-w-xs overflow-hidden bg-cover bg-no-repeat'>
-                                <img className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img onClick={() => setQuery("Workspace")} className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="" />
                                 <button onClick={() => setQuery("Workspace")} className='text-center-car text-white font-bold text-2xl'>Workspace</button>
-                            </div></SwiperSlide>
-                            <SwiperSlide><div className='car-in-div relative max-w-xs overflow-hidden bg-cover bg-no-repeat'>
-                                <img className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src='https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg' alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img onClick={() => setQuery("Food")} className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src='https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg' alt="" />
                                 <button onClick={() => setQuery("Food")} className='text-center-car text-white font-bold text-2xl'>Food</button>
-                            </div></SwiperSlide>
-                            <SwiperSlide><div className='car-in-div relative max-w-xs overflow-hidden bg-cover bg-no-repeat'>
-                                <img className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg" alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img onClick={() => setQuery("Dog")}  className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/58997/pexels-photo-58997.jpeg" alt="" />
                                 <button onClick={() => setQuery("Dog")} className='text-center-car text-white font-bold text-2xl'>Dog</button>
-                            </div></SwiperSlide>
-                            <SwiperSlide><div className='car-in-div relative max-w-xs overflow-hidden bg-cover bg-no-repeat'>
-                                <img className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img onClick={() => setQuery("Mountain")} className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="" />
                                 <button onClick={() => setQuery("Mountain")} className='text-center-car text-white font-bold text-2xl'>Mountain</button>
-                            </div></SwiperSlide>
-                            <SwiperSlide><div className='car-in-div relative max-w-xs overflow-hidden bg-cover bg-no-repeat'>
-                                <img className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg" alt="" />
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <img onClick={() => setQuery("Flower")}  className='max-w-xs transition duration-300 ease-in-out hover:scale-110' src="https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg" alt="" />
                                 <button onClick={() => setQuery("Flower")} className='text-center-car text-white font-bold text-2xl'>Flower</button>
-                            </div></SwiperSlide>
+                            </SwiperSlide>
                         </Swiper>
                     </div>
                     {/* Top category End */}
@@ -135,11 +142,11 @@ const Banner = () => {
                     {/* All images section */}
                     <div className="cate-nav navbar-start lg:flex justify-between m-auto">
                         <ul className="menu menu-horizontal px-1">
-                            <Link onClick={() => setQuery("All")} className='rounded-md font-semibold text-lg text-gray-500 hover:text-gray-800 text-center p-3'>All</Link>
-                            <Link onClick={() => setQuery("photos")} className='navlink rounded-md text-gray-500 hover:text-gray-800 font-semibold text-lg text-center p-3 '>Photos</Link>
-                            <Link onClick={() => setQuery("videos")} to="" className='navlink rounded-md text-gray-500 hover:text-gray-800 font-semibold text-lg text-center p-3'> Videos</Link>
-                            <Link onClick={() => setQuery("Freebies")} to="" className='navlink rounded-md text-gray-500 hover:text-gray-800 font-semibold text-lg text-center p-3'> Freebies</Link>
-                            <Link onClick={() => setQuery("360")} to="" className='navlink rounded-md text-gray-500 hover:text-gray-800 font-semibold text-lg text-center p-3'>360</Link>
+                            <a onClick={() => setQuery("All")} className='navlink rounded-md font-semibold text-lg text-gray-500 hover:text-gray-800 text-center p-3'>All</a>
+                            <a onClick={() => setQuery("photos")} className='navlink rounded-md font-semibold text-lg text-center p-3 '>Photos</a>
+                            <a onClick={() => setQuery("videos")} to="" className='navlink rounded-md text-gray-500 hover:text-gray-800 font-semibold text-lg text-center p-3'> Videos</a>
+                            <a onClick={() => setQuery("Freebies")} to="" className='navlink rounded-md text-gray-500 hover:text-gray-800 font-semibold text-lg text-center p-3'> Freebies</a>
+                            <a onClick={() => setQuery("360")} to="" className='navlink rounded-md text-gray-500 hover:text-gray-800 font-semibold text-lg text-center p-3'>360</a>
                         </ul>
                         <div className="dropdown dropdown-bottom dropdown-end">
                             <div tabIndex={0} role="button" className="btn btn-sm mt-5">Recommanded</div>
@@ -151,7 +158,7 @@ const Banner = () => {
                             </ul>
                         </div>
                     </div>
-                    <div className='img-container gap-6'>
+                    <div className='img-container m-auto gap-3'>
                         {
                             photos?.map((item, index) => {
                                 return (
