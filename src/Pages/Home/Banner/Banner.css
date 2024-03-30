@@ -239,6 +239,7 @@
     }
 
     .img-container {
+        width: 100%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         flex-direction: row;
@@ -248,8 +249,8 @@
     }
 
     .box {
-        width: 320px;
-        height: 320px;
+        width: 315px;
+        height: 315px;
     }
 
     .box-img {
