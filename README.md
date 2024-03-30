@@ -1,8 +1,17 @@
-# React + Vite
+ArtAlley
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live site: https://artalley.netlify.app/
 
-Currently, two official plugins are available:
+ArtAlley is a dynamic website that serves as your local source for high-quality images and videos directly from their creators. It is built using React, Tailwind CSS, React Icons, Lottie Animation, and Swiper React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+* Search Functionality: Easily search for photos and videos using the search bar.
+* Top Categories: Explore top categories such as summer, food, city, workspace, and more.
+* Recommended Content: Discover recommended content based on trending topics and user preferences.
+*Pagination: Navigate through multiple pages of content seamlessly.
+Technologies Used
+* React A JavaScript library for building user interfaces.
+* Tailwind CSS: A utility-first CSS framework for quickly building custom designs.
+* React Icons: Popular icon library for React applications.
+* Lottie Animation: Library for adding animations to web and mobile apps.
+* Swiper React: React implementation of the Swiper component for creating touch sliders and carousels.
